@@ -1,0 +1,116 @@
+<html>
+<head>
+<style>
+body { background-color: lightblue; }
+
+h1 { color: red;
+  text-align: center;
+  font-family: Verdana;
+}
+h2 { color : green;
+    text-align : left;
+    font-family : arial;}
+h3 { color : white;}
+
+
+p { font-family: verdana;
+  font-size: 20px;}
+  
+img {border : 3px solid yellow;
+     border-radius: 12px;
+     width : 150px ;
+     display : block ;
+     opacity : 0.4;}
+
+table {background-color : red ;}
+ul {background-color : blue ;}
+table , tr ,td , ul {border : 2px solid black;}
+tr:hover {background-color : #f5f5f5}
+     
+     
+</style>
+
+<script>
+function veziViitor()
+{
+document.getElementById("numeProfil").innerHTML = "Ing. Mazga Alexandra - network engineer" ;
+var tabelEducatie = document.getElementById("tabEducatie") ; 
+tableEducatie.rows[0].cells[0].innerHTML = "UTCN";
+tableEducatie.rows[0].cells[2].innerHTML = "ETTI";
+tableEducatie.rows[1].cells[0].innerHTML = "Companie";
+tableEducatie.rows[1].cells[2].innerHTML = "Internship" ; 
+
+document.getElementById("pozaProfil").src = "poza2.jpg";
+
+document.body.style.backgroundColor = "Pink";
+document.body.style.font-family = "Comic Sans MS";
+
+var par = document.getElementsByTagName("p");
+var i ;
+for ( i = 0 ; i < par.length; i++) {
+par[i].style.color = "green";
+}
+
+document.getElementById("pozaProfil").style.opacity = "0.7";
+document.getElementById("pozaProfil").style.border = "5px";
+}
+
+function arVarst ()
+{ 
+   var azi = new Date;
+   var varstMea;
+   
+   var anNasc = document.get.ElementById("varsta").innerHTML;
+   
+   varstMea = azi.getFullYear() - parseInt(anNasc);
+   
+   document.getElementById("varsta").innerHTML = varstMea;
+}
+ 
+</script>
+
+
+
+
+</head>
+<body>
+
+<h1 id="numeProfil">Mazga Alexandra</h1>
+<img id="pozaProfil" src="alexandra.jpg"> 
+<p>Email : mazgaalexandra@gmail.com</p>
+<p>Educaţia nu este cât de mult ai memorat, nici măcar cât ştii. Este capacitatea de a diferenţia între ceea ce ştii şi ceea ce nu ştii – Anatole France</p>
+
+<button onclick="veziViitor()">Alta viata</button>
+
+<p onmouseover = "arVarst()" id="varsta">2001</p>
+
+<p> Discipline pe care as vrea sa le aprofundez : </p>
+<ul> 
+<li> Componente si circuite pasive </li>
+<li> Fizica </li>
+<li> Dispozitive electronice </li>
+<li> Programarea calculatoarelor si limbaje de programare </li>
+<p> Link-uri discipline :   </p>
+<p> <a href="https://etti.utcluj.ro/files/FiseDisciplina/EaRo/05.pdf"> Componente si circuite pasive </a>
+<p> <a href="https://etti.utcluj.ro/files/FiseDisciplina/EaRo/03.pdf"> Fizica </a>
+<p> <a href="https://etti.utcluj.ro/files/FiseDisciplina/EaRo/12.pdf"> Dispozitive electronice </a>
+<p> <a href="https://etti.utcluj.ro/files/FiseDisciplina/EaRo/04.pdf"> Programarea calculatoarelor si limbaje de programare </a>
+
+<h3> Hobby-uri : </h3>
+<ul>
+<li> Descoperirea de lucruri noi</li>
+<li> Calatoritul  </li>
+<li> Vizionatul de documentare  si filme </li>
+<li> Plimbarile lungi  </li>
+
+<h2> Educatie </h2>
+<table id="tabEducatie">
+<tr><td>Colegiul National “Liviu Rebreanu” Bistrita</td><td>2015-2019</td>
+<tr><td>UTCN - ETTI</td><td>2020-prezent</td>
+</table>
+
+<p> <a href="file:///C:/Users/Alexandra/Desktop/Catalogul/Catalogul%20colegilor.html"> Inapoi la catalog </a>
+
+
+</body>
+</html>
